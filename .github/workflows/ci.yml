@@ -1,0 +1,52 @@
+name: AgriEye CI & Build Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-frontend:
+    name: Build Frontend (Vite + React)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript & Vite Build
+        run: npm run build
+
+  test-backend:
+    name: Verify GEE FastAPI Backend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install backend dependencies
+        run: |
+          cd gee-backend
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Test backend import & simulation health check
+        run: |
+          cd gee-backend
+          python -c "import main; print('FastAPI app verified:', main.app.title)"
