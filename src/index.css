@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest: #14532d;
+    --color-lime: #84cc16;
+    --color-sand: #fafaf5;
+    --color-charcoal: #1f2937;
+  }
+
+  body {
+    background-color: var(--color-sand);
+    color: var(--color-charcoal);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+}
+
+/* Glassmorphism panel styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px -5px rgba(20, 83, 45, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+}
+
+.glass-panel-dark {
+  background: rgba(17, 24, 39, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(20, 83, 45, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 83, 45, 0.4);
+}
+
+/* MapLibre Canvas reset */
+.maplibregl-map {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.maplibregl-ctrl-bottom-left,
+.maplibregl-ctrl-bottom-right {
+  z-index: 10 !important;
+}
+
+/* Custom slider input styles */
+input[type="range"] {
+  accent-color: #84cc16;
+}
+
+/* Compare swipe divider */
+.compare-swipe-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #84cc16;
+  box-shadow: 0 0 12px rgba(132, 204, 22, 0.8), 0 0 4px rgba(0,0,0,0.4);
+  z-index: 25;
+  pointer-events: none;
+}
+
+.compare-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  background-color: #14532d;
+  border: 2px solid #84cc16;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  pointer-events: auto;
+  cursor: ew-resize;
+}

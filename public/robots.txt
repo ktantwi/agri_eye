@@ -1,0 +1,8 @@
+# AgriEye Robots.txt
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://agrieye.io/sitemap.xml

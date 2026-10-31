@@ -1,0 +1,46 @@
+{
+  "name": "agrieye",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mapbox/mapbox-gl-draw": "^1.4.3",
+    "@supabase/supabase-js": "^2.48.1",
+    "@tanstack/react-query": "^5.66.0",
+    "@turf/turf": "^7.2.0",
+    "canvas-confetti": "^1.9.4",
+    "clsx": "^2.1.1",
+    "file-saver": "^2.0.5",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.475.0",
+    "maplibre-gl": "^4.7.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.29.0",
+    "recharts": "^2.15.1",
+    "tailwind-merge": "^3.0.1",
+    "togeojson": "^0.16.0",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/file-saver": "^2.0.7",
+    "@types/mapbox__mapbox-gl-draw": "^1.4.6",
+    "@types/node": "^22.13.4",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.14"
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AgriEye — See your fields from space | Satellite Crop & Vegetation Monitoring</title>
+    <meta name="description" content="AgriEye delivers 10m Sentinel-2 satellite NDVI mapping, vegetation stress detection, time-series analytics, and automated cloud filtering. Draw your fields and analyze crop health in seconds." />
+    <meta name="keywords" content="NDVI map generator, crop health monitoring, satellite field monitoring, free NDVI app, NDVI from polygon, precision agriculture, Sentinel-2 vegetation index" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://agrieye.io/" />
+    <meta property="og:title" content="AgriEye — See your fields from space" />
+    <meta property="og:description" content="Satellite crop & vegetation monitoring platform. Interactive full-screen map with 10m Sentinel-2 NDVI, EVI, NDWI, time-series, and instant field analytics." />
+    <meta property="og:image" content="https://agrieye.io/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://agrieye.io/" />
+    <meta property="twitter:title" content="AgriEye — See your fields from space" />
+    <meta property="twitter:description" content="Satellite crop & vegetation monitoring platform. Real-time NDVI maps, time-series charts, and multi-date comparison." />
+    <meta property="twitter:image" content="https://agrieye.io/og-image.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://agrieye.io/" />
+
+    <!-- Favicon: Green leaf-eye SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 16C5 9 10 5 16 5s11 4 14 11c-3 7-8 11-14 11S5 23 2 16z' fill='none' stroke='%2314532d' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2384cc16'/%3E%3Cpath d='M16 11c2.5 0 4.5 2 4.5 4.5C20.5 18 16 21 16 21s-4.5-3-4.5-5.5c0-2.5 2-4.5 4.5-4.5z' fill='%2314532d'/%3E%3C/svg%3E" />
+
+    <!-- Fonts: Inter & Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- MapLibre CSS -->
+    <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.css" type="text/css" />
+
+    <!-- Structured Data: Organization & SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://agrieye.io/#organization",
+          "name": "AgriEye",
+          "url": "https://agrieye.io",
+          "logo": "https://agrieye.io/logo.png",
+          "sameAs": ["https://twitter.com/AgriEyeApp", "https://linkedin.com/company/agrieye"]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://agrieye.io/#software",
+          "name": "AgriEye",
+          "operatingSystem": "Web",
+          "applicationCategory": "BusinessApplication",
+          "description": "Satellite crop and vegetation monitoring platform providing Sentinel-2 NDVI maps, crop health anomaly detection, and field boundary analytics.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-sand-50 text-charcoal-800 antialiased selection:bg-lime-500 selection:text-forest-950 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
